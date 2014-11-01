@@ -8,6 +8,14 @@ title: Social Media
       - (1..59).each do |index|
         %li{class: "head head-#{index}"}
           %img{src: "images/heads/#{index}.png"}
+
   %img{src: 'images/desk.png', class: 'desk'}
   %img{src: 'images/chair.png', class: 'chair'}
   %img{src: 'images/rug.png', class: 'rug'}
+
+%section.data-center
+  - (1..6).each do |index|
+    %ul{class: "heads rows row-#{index}"}
+      - (1..59).each do |head_index|
+        %li{class: "head head-#{head_index}"}
+          %img{src: "images/heads/#{head_index}.png"}

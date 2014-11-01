@@ -1,31 +1,63 @@
-@include keyframes(conveyer) {
+@include keyframes(conveyer-left) {
   100% {
     margin-left: -3000px;
   }
 }
 
-ul.heads {
-  @include animation(conveyer 12s linear infinite);
-  height: 120px;
-  position: relative;
-  margin-left: 200px;
+@include keyframes(conveyer-right) {
+  100% {
+    margin-left: 1000px;
+  }
+}
 
+ul.heads {
   li {
     display: inline-block;
-    position: absolute;
-
-    @for $i from 1 through 59 {
-      $width: image-width("heads/#{$i}.png");
-
-      &.head-#{$i} {
-        left: $i * $width/2;
-      }
-    }
 
     img {
       zoom: 0.45;
-      @include transform(scaleX(-1));
-      @include filter(FlipH);
+    }
+  }
+
+  .media & {
+    @include animation(conveyer-left 12s linear infinite);
+    height: 120px;
+    position: relative;
+    margin-left: 200px;
+
+    li {
+      position: absolute;
+
+      @for $i from 1 through 59 {
+        $width: image-width("heads/#{$i}.png");
+
+        &.head-#{$i} {
+          left: $i * $width/2;
+        }
+      }
+
+      img {
+        @include transform(scaleX(-1));
+        @include filter(FlipH);
+      }
+    }
+  }
+
+  .data-center & {
+    display: none;
+    position: absolute;
+    width: 6000px;
+    @include animation(conveyer-right 5s linear infinite);
+
+    @for $i from 1 through 6 {
+      &.row-#{$i} {
+        bottom: $i * 80px;
+      }
+    }
+
+    li {
+      margin: -80px 0 0 -35px;
+      margin: -40px 0 0 -30px
     }
   }
 }
