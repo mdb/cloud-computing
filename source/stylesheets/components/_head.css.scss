@@ -1,0 +1,36 @@
+@include keyframes(conveyer) {
+  100% {
+    margin-left: -3000px;
+  }
+}
+
+ul.heads {
+  @include animation(conveyer 12s linear infinite);
+  height: 120px;
+  position: relative;
+  margin-left: 200px;
+
+  li {
+    display: inline-block;
+    position: absolute;
+
+    @for $i from 1 through 59 {
+      $width: image-width("heads/#{$i}.png");
+
+      &.head-#{$i} {
+        left: $i * $width/2;
+      }
+    }
+
+    img {
+      zoom: 0.45;
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+      transform: scaleX(-1);
+      -ms-filter: "FlipH";
+      filter: FlipH;
+    }
+  }
+}

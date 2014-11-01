@@ -1,0 +1,14 @@
+---
+title: Social Media
+---
+
+%section.office
+  %section.media
+    %ul.heads
+      - (1..10).each do
+        - (1..59).each do |index|
+          %li{class: "head head-#{index}"}
+            %img{src: "images/heads/#{index}.png"}
+  %img{src: 'images/desk.png', class: 'desk'}
+  %img{src: 'images/chair.png', class: 'chair'}
+  %img{src: 'images/rug.png', class: 'rug'}
