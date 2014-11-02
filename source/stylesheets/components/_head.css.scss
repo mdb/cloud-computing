@@ -44,7 +44,6 @@ ul.heads {
   }
 
   .data-center & {
-    display: none;
     position: absolute;
     width: 6000px;
     @include animation(conveyer-right 5s linear infinite);
@@ -56,8 +55,7 @@ ul.heads {
     }
 
     li {
-      margin: -80px 0 0 -35px;
-      margin: -40px 0 0 -30px
+      margin: -30px 0 0 -20px
     }
   }
 }
