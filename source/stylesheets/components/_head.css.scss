@@ -47,7 +47,7 @@ ul.heads {
     position: absolute;
     width: 6000px;
     margin-left: -5000px;
-    @include animation(conveyer-right 3s linear 1);
+    @include animation(conveyer-right 4s linear 1);
     @include animation-fill-mode(forwards);
 
     @for $i from 1 through 20 {
