@@ -5,8 +5,8 @@
 }
 
 @include keyframes(conveyer-right) {
-  100% {
-    margin-left: 1000px;
+  to {
+    margin-left: -2000px;
   }
 }
 
@@ -46,10 +46,13 @@ ul.heads {
   .data-center & {
     position: absolute;
     width: 6000px;
-    @include animation(conveyer-right 5s linear infinite);
+    margin-left: -5000px;
+    @include animation(conveyer-right 3s linear 1);
+    @include animation-fill-mode(forwards);
 
-    @for $i from 1 through 6 {
+    @for $i from 1 through 20 {
       &.row-#{$i} {
+        @include animation-delay(#{$i*2}s);
         bottom: $i * 80px;
       }
     }

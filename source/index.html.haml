@@ -14,8 +14,8 @@ title: Social Media
   %img{src: 'images/rug.png', class: 'rug'}
 
 %section.data-center
-  - (1..6).each do |index|
+  - (1..20).each do |index|
     %ul{class: "heads rows row-#{index}"}
       - (1..59).each do |head_index|
         %li{class: "head head-#{head_index}"}
-          %img{src: "images/heads/#{head_index}.png"}
+          %img{src: "images/heads/#{rand(59)}.png"}
