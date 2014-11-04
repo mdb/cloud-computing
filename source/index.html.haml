@@ -2,6 +2,12 @@
 title: Social Media
 ---
 
+%section.cloud-cluster
+  - (1..4).each do |clouds_index|
+    %div{class: "clouds clouds-#{clouds_index}"}
+      - (1..6).each do |index|
+        %img{class: "cloud cloud-#{index}", src: 'images/cloud.png'}
+
 %section.office
   %section.media
     %ul.heads
