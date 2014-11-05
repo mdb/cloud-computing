@@ -8,7 +8,7 @@ section.cloud-cluster {
   position: absolute;
   top: -135px;
   left: -2000px;
-  @include animation(clouds-movement 6s linear 1);
+  @include animation(clouds-movement 5s linear 1);
   @include animation-delay(6s);
   @include animation-fill-mode(forwards);
 
