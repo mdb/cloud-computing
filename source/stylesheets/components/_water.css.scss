@@ -1,0 +1,44 @@
+section.water {
+  @include keyframes(rise) {
+    100% {
+      top: -200px;
+    }
+  }
+
+  @include animation-name(rise);
+  @include animation-duration(5s);
+  @include animation-delay(7s);
+  @include animation-fill-mode(forwards);
+
+  top: 1000px;
+  position: absolute;
+  margin-left: -200px;
+  width: 200%;
+
+  @include keyframes(drift-left) {
+    from { margin-left: 25px; }
+    to   { margin-left: -25px; }
+  }
+
+  @include keyframes(drift-right) {
+    from { margin-left: -25px; }
+    to   { margin-left: 25px; }
+  }
+
+  div.current {
+    margin-bottom: -60px;
+    @include animation-name(drift-left);
+    @include animation-duration(1s);
+    @include animation-iteration-count(infinite);
+    @include animation-direction(alternate);
+
+    &.odd {
+      @include animation-name(drift-right);
+    }
+
+    svg {
+      opacity: 0.9;
+      margin-right: -4px;
+    }
+  }
+}
