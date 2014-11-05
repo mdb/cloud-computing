@@ -1,4 +1,7 @@
 require 'fog'
+require 'lib/template_helpers'
+
+helpers TemplateHelpers
 
 set :css_dir, 'stylesheets'
 set :js_dir, 'javascripts'
