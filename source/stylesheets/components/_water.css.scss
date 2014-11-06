@@ -7,7 +7,7 @@ section.water {
 
   @include animation-name(rise);
   @include animation-duration(5s);
-  @include animation-delay(7s);
+  @include animation-delay(8s);
   @include animation-fill-mode(forwards);
 
   top: 1000px;

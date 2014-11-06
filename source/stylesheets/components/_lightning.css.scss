@@ -1,0 +1,28 @@
+section.lightning {
+  @include keyframes(flash) {
+    0% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @include animation(flash 0.45s linear 1);
+  @include animation-delay(8s);
+
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+
+  .bolt {
+    width: 100px;
+    margin: 0 -40px;
+  }
+}

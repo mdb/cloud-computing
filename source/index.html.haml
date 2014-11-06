@@ -5,8 +5,12 @@ title: Social Media
 %section.cloud-cluster
   - (1..4).each do |clouds_index|
     %div{class: "clouds clouds-#{clouds_index}"}
-      - (1..6).each do |index|
+      - (1..20).each do |index|
         %img{class: "cloud cloud-#{index}", src: 'images/cloud.png'}
+
+%section.lightning
+  - (1..4).each do |index|
+    %img{class: "bolt bolt-#{index}", src: "images/lightning/#{index}.png"}
 
 %section.office
   %section.media
@@ -20,7 +24,7 @@ title: Social Media
   %img{src: 'images/rug.png', class: 'rug'}
 
 %section.data-center
-  - (1..20).each do |index|
+  - (1..25).each do |index|
     %ul{class: "heads rows row-#{index}"}
       - (1..59).each do |head_index|
         %li{class: "head head-#{head_index}"}
@@ -29,7 +33,7 @@ title: Social Media
 %section.water
   - (1..20).each do |current_index|
     %div{class: "current current-#{current_index} #{even_or_odd(current_index)}"}
-      - (1..20).each do |index|
+      - (1..30).each do |index|
         %svg{xmlns: 'http://www.w3.org/2000/svg', width: '100', height: '130', viewBox: '0 0 100 130', class: "wave wave-#{index}"}
           %path{fill: '#E7ECF2', d: 'M100 111s-50 40-100 0V1c50 40 100 0 100 0v110z'}
           %path{fill: 'none', stroke: '#42797C', d: 'M0 11c50 40 100 0 100 0M0 21c50 40 100 0 100 0M0 31c50 40 100 0 100 0M0 41c50 40 100 0 100 0M0 51c50 40 100 0 100 0M0 61c50 40 100 0 100 0M0 71c50 40 100 0 100 0M0 81c50 40 100 0 100 0M0 91c50 40 100 0 100 0M0 101c50 40 100 0 100 0M0 1c50 40 100 0 100 0M0 111c50 40 100 0 100 0'}
