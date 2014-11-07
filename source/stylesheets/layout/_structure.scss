@@ -16,7 +16,7 @@ body {
     @include animation(fade-out 4s ease-in);
     @include animation-fill-mode(forwards);
     @include animation-iteration-count(1);
-    @include animation-delay(4s);
+    @include animation-delay(9s);
 
     section.media {
       position: absolute;

@@ -1,6 +1,6 @@
 @include keyframes(conveyer-left) {
   100% {
-    margin-left: -6000px;
+    margin-left: -4000px;
   }
 }
 
@@ -21,7 +21,7 @@ ul.heads {
 
   .media & {
     @include animation(conveyer-left 12s linear infinite);
-    @include animation-delay(2s);
+    @include animation-delay(4s);
     height: 120px;
     position: relative;
     margin-left: 275px;
@@ -49,7 +49,7 @@ ul.heads {
     width: 6000px;
     margin-left: -5000px;
     @include animation(conveyer-right 3s linear 1);
-    @include animation-delay(3s);
+    @include animation-delay(8s);
     @include animation-fill-mode(forwards);
 
     @for $i from 1 through 25 {
@@ -81,7 +81,7 @@ ul.heads {
         @include transform-origin(10% 10%);
         @include animation-iteration-count(infinite);
         @include animation-timing-function(linear);
-        @include animation-delay(8s);
+        @include animation-delay(13s);
       }
     }
   }

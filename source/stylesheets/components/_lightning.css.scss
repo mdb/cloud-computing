@@ -14,7 +14,7 @@ section.lightning {
   }
 
   @include animation(flash 0.45s linear 1);
-  @include animation-delay(8s);
+  @include animation-delay(13s);
 
   opacity: 0;
   position: absolute;

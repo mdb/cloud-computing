@@ -7,7 +7,7 @@ section.water {
 
   @include animation-name(rise);
   @include animation-duration(5s);
-  @include animation-delay(8s);
+  @include animation-delay(13s);
   @include animation-fill-mode(forwards);
 
   top: 1000px;
@@ -25,8 +25,8 @@ section.water {
     to   { margin-left: 25px; }
   }
 
-  div.current {
-    margin-bottom: -60px;
+  ul.current {
+    margin-bottom: -200px;
     @include animation-name(drift-left);
     @include animation-duration(1s);
     @include animation-iteration-count(infinite);
@@ -36,9 +36,13 @@ section.water {
       @include animation-name(drift-right);
     }
 
-    svg {
-      opacity: 0.9;
-      margin-right: -4px;
+    li {
+      display: inline;
+
+      svg {
+        opacity: 0.9;
+        margin-right: -4px;
+      }
     }
   }
 }
