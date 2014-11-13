@@ -1,8 +1,8 @@
 # Cloud Computing
 
 > "...but for my family -- sys admins for generations -- the cloud
-> marked beginning of the end. Pops lost the server farm after the
-> first wave of migrations."
+> marked the beginning of the end. Pops lost the server farm after
+> the first wave of migrations."
 
 An illustration animated with CSS3.
 
